@@ -217,7 +217,7 @@ int main()
         cout<<"====================="<<endl;
         cout<<endl;
         
-        /*
+        
         cout<<"====================="<<endl;
         cout<<"PLAYLIST DISPLAY TESTS"<<endl;
         cout<<"====================="<<endl;
@@ -234,7 +234,7 @@ int main()
         cout<<"====================="<<endl;
         cout<<"FINSIHED PLAYLIST DISPLAY TESTS"<<endl;
         cout<<"====================="<<endl;
-        cout<<endl;*/
+        cout<<endl;
         
         cout<<"====================="<<endl;
         cout<<"ADD SONG TESTS"<<endl;
