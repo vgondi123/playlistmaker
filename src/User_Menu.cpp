@@ -6,6 +6,7 @@ User_Menu::~User_Menu(){
 		
 		for(int i=0;i<user_playables.size();i++){
 			user_playables.at(i)->deleteP();
+			delete user_playables[i];
 		}
 		user_playables.clear();
 		
