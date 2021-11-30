@@ -118,7 +118,9 @@ void User_Menu::public_create_new_playlist(){
 				return ;
             		}
         	}
-		user_playables.push_back(new Public_Playlist(playlist_name));
+		Public_Playlist* temp = new Public_Playlist(playlist_name);
+		user_playables.push_back(temp);
+		delete temp;
 	}
 }
 void User_Menu::public_delete_playlist(){
@@ -220,7 +222,9 @@ void User_Menu::private_create_new_playlist(){
 				return ;
             		}
         	}
-		user_playables.push_back(new Private_Playlist(playlist_name));
+		Private_Playlist* temp = new Private_Playlist(playlist_name);
+		user_playables.push_back(temp);
+		delete temp;
 	}
 }
 
