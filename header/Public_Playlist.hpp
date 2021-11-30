@@ -35,6 +35,8 @@ public:
 	void deleteP(); // helper function for delete  playlist
 	int hide_unhide_song(int,string);//testing purposes only
 	int shuffle(int,int);//testing purposes only
+	string Play(); //testing purposes only
+	string Analytics(); // testing purposes only
 };
 
 #endif // PUBLIC_PLAYLIST_HPP
