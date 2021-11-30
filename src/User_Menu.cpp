@@ -192,6 +192,14 @@ void User_Menu::public_add_playlist()
 	}
 	
 }
+
+//void User_Menu::Public_Add_Playlist(string playlistname)
+//{        
+        //Public_Playlist* new_playlist = new Public_Playlist(playlistname);
+        //user_playables.push_back(new_playlist);
+        
+
+//}
 //END PUBLIC FUNCTIONS
 
 //START PRIVATE FUNCTIONS	
@@ -344,4 +352,35 @@ void User_Menu::add_playlist()//testing purposes only
 {	
 	Public_Playlist* new_playlist = new Public_Playlist("name");
 	user_playables.push_back(new_playlist);
+}
+
+string User_Menu::Delete_Playlist(int input) //testing
+{
+string test = "";
+	//for(unsigned int i = 0 ; i < user_playables.size(); i++ ){
+		//cout << i+1 << ". " << user_playables.at(i)->get_name() << endl;
+   // }
+    
+    //int input = 0;
+    //cout << "Please type the number next to the playlist you would like to delete, or to return to options press 0 and enter" << endl;
+    //cin >> input;
+    //cin.ignore();
+    
+    if( input < 0 || input > user_playables.size()){
+		test = "Invalid input";
+		//public_delete_playlist();
+	}
+	
+	else if( input == 0) {
+		test = "return";
+	}
+	
+	else{
+		string n = user_playables.at(input-1)->get_name();
+		user_playables.at(input-1)->deleteP();
+		user_playables.erase(user_playables.begin()+input-1);
+		test = n + " was deleted."; 
+	}
+
+return test;
 }
