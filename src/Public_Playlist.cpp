@@ -371,9 +371,19 @@ void Public_Playlist::analytics(){
 	
 }
 
+// void Public_Playlist::deleteP(){//helper function
+// 	for(unsigned int i = 0; i < songs.size(); i++) 
+// 	    songs.erase(songs.begin()+i);
+// }
 void Public_Playlist::deleteP(){//helper function
-	for(unsigned int i = 0; i < songs.size(); i++) 
-	    songs.erase(songs.begin()+i);
+	for(unsigned int i = 0; i < songs.size(); i++){ 
+	    delete songs[i];
+	}
+	for(unsigned int i=0;i<shuffled_songs.size();i++){
+		delete shuffled_songs[i];
+	}
+	songs.clear();
+	shuffled_songs.clear();
 }
 
 int Public_Playlist::hide_unhide_song(int tn, string input)//testing purposes only
