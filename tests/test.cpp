@@ -216,7 +216,128 @@ int main()
         cout<<"FINSIHED SHUFFLE TESTS"<<endl;
         cout<<"====================="<<endl;
         cout<<endl;
-    
+
+	cout<<"====================="<<endl;
+        cout<<"PLAYLIST PLAY TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
+
+	Public_Playlist* test_play = new Public_Playlist("x");
+	cout << "Test one: play called on an empty playlist" << endl;
+        cout << "Test Result: ";
+	if(test_play->Play() == "Empty playlist")
+        cout<< "PASSED: proper error message outputted" << endl;
+        else
+        cout << "FAILED: undefined behavior" << endl;
+	
+	test_play->add_song("hello","world",1);
+	test_play->add_song("goodbye", "world", 3);
+	test_play->add_song("good morning", "everyone", 4);
+
+
+	cout << endl;
+	cout<< "Test two: play songs from playlist" << endl;
+	cout << "Test Result: ";
+	if(test_play->Play() == "Now playing: hello, by world and goodbye, by world and good morning, by everyone") 
+	cout << "PASSED: all songs in playlist were played" << endl;
+	else 
+	cout << "FAILED: undefined behavior" << endl;
+       
+        cout << endl;
+	cout<< "Test three: does not play hidden songs" << endl;
+	cout << "Test Result: ";
+	Public_Song* song_test_play = new Public_Song("All Too Well","Taylor Swift", 10);
+        song_test_play->set_hidden_status();
+	test_play->add_song(song_test_play);
+	//cout << test_play->Play();
+	if(test_play->Play() == "Now playing: hello, by world and goodbye, by world and good morning, by everyone")
+        cout << "PASSED: hidden song was not played" << endl;
+        else
+        cout << "FAILED: undefined behavior" << endl;
+	
+	cout<<"====================="<<endl;
+        cout<<"FINSIHED PLAYLIST PLAY TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
+
+	cout<<"====================="<<endl;
+        cout<<"ANALYTICS TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
+	
+	cout<< "Test one: Tie for most played song" << endl;
+	cout << "Test Result: ";
+	
+	if ( test_play->Analytics() == "Your most played songs are : hello by world  goodbye by world  good morning by everyone   AND You spent 16 minutes listening to this playlist.")
+	cout << "PASSED: expected implementation of multiple most played songs with correct total time" << endl;
+	else
+	cout << "FAILED: undefined behavior" << endl;
+	cout << endl;
+
+	cout << "Test two: Run analytics on an empty playlist" << endl;
+	cout << "Test Result: ";
+	Public_Playlist* test_Analytics = new Public_Playlist("h");
+	if(test_Analytics->Analytics() == "Please add songs before retrieving analytics.")
+	cout << "PASSED: Expected error output" << endl;
+	else
+	cout << "FAILED: Undefined behavior" << endl;
+
+	cout << endl;
+	cout << "Test three: One top song" << endl;
+	cout << "Test Result: ";
+
+	test_Analytics->add_song("Love Story", "Taylor Swift", 3);
+	test_Analytics->Play();
+	test_Analytics->add_song("You Belong with Me", "Taylor Swift", 4);
+	test_Analytics->Play();
+	
+	if (test_Analytics->Analytics() == "Your most played song is Love Story by Taylor Swift AND You spent 10 minutes listening to this playlist.")
+	cout << "PASSED: outputted most played song with correct total time" << endl;
+	else
+	cout << "FAILED: undefined behavior" << endl;	    
+
+	cout<<"====================="<<endl;
+        cout<<"FINSIHED ANALYTICS TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
+	
+	cout<<"====================="<<endl;
+        cout<<"DELETE PLAYLIST TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
+	
+	cout << "Test one: Deleting empty playlist" << endl;
+	cout << "Test Result: ";
+	
+
+	User_Menu* testerD = new User_Menu();
+	if (testerD->Delete_Playlist(-1)=="Invalid input" )
+	cout << "PASSED: Expected error output" << endl;
+	else
+	cout << "FAILED: undefined behavior" << endl;
+	cout << endl;
+	
+	cout << "Test two: Deletes expected playlist" << endl;
+	cout << "Test Result: " ;
+	testerD->add_playlist();
+	//cout << testerD->Delete_Playlist(1);
+	if(testerD->Delete_Playlist(1) == "name was deleted.")
+	cout << "PASSED: deletes specified playlist" << endl;
+	else
+	cout << "FAILED: undefined behavior" << endl;
+	
+	 cout<<"====================="<<endl;
+        cout<<"FINSIHED DELETE PLAYLIST TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
+	delete testerD;
+	delete test_Analytics;
+	delete test_play;
+	delete song_test_play;
+	
+	
+
+
     cout<<endl;
     cout<<"====================="<<endl;
     cout<<"TESTS COMPLETED"<<endl;
