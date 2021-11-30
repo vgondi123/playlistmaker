@@ -347,40 +347,35 @@ int main()
 	delete test_play;
 	delete song_test_play;
 	
-	
-
-
-
         
-        
-        cout<<"====================="<<endl;
-        cout<<"PLAYLIST DISPLAY TESTS"<<endl;
-        cout<<"====================="<<endl;
-        cout<<endl;
+//         cout<<"====================="<<endl;
+//         cout<<"PLAYLIST DISPLAY TESTS"<<endl;
+//         cout<<"====================="<<endl;
+//         cout<<endl;
             
-            //Playlist Display Test One
-            cout << "Test one: Public playlist displays correctly" << endl;
-            Public_Playlist* display_test = new Public_Playlist("c");
-            cout << "Test Result: ";
-            string display;
-            Public_Song* temp2 = new Public_Song("he", "hi", 100);
-            display_test->add_song(temp2);
-            display = "he - hi";
+//             //Playlist Display Test One
+//             cout << "Test one: Public playlist displays correctly" << endl;
+//             Public_Playlist* display_test = new Public_Playlist("c");
+//             cout << "Test Result: ";
+//             string display;
+//             Public_Song* temp2 = new Public_Song("he", "hi", 100);
+//             display_test->add_song(temp2);
+//             display = "he - hi";
 
-            display = display +  " (AS) - ADD SONG (DS) - DELETE SONG (HS) - HIDE/UNHIDE SONG (P) - PLAY (PS) - PLAY SONG (S) - SHUFFLE (A) - ANALYTICS (E) - EXIT ENTER OPTION:";
-            if (display_test->display2() == display) {
-               cout << "PASSED - Displayed Correctly" << endl;
-            }
-           else {
-               cout <<"FAILED - Incorrect Display" << endl;
-            }
-            cout << endl;
-            //delete temp2;
+//             display = display +  " (AS) - ADD SONG (DS) - DELETE SONG (HS) - HIDE/UNHIDE SONG (P) - PLAY (PS) - PLAY SONG (S) - SHUFFLE (A) - ANALYTICS (E) - EXIT ENTER OPTION:";
+//             if (display_test->display2() == display) {
+//                cout << "PASSED - Displayed Correctly" << endl;
+//             }
+//            else {
+//                cout <<"FAILED - Incorrect Display" << endl;
+//             }
+//             cout << endl;
+//             //delete temp2;
       
-        cout<<"====================="<<endl;
-        cout<<"FINSIHED PLAYLIST DISPLAY TESTS"<<endl;
-        cout<<"====================="<<endl;
-        cout<<endl;
+//         cout<<"====================="<<endl;
+//         cout<<"FINSIHED PLAYLIST DISPLAY TESTS"<<endl;
+//         cout<<"====================="<<endl;
+//         cout<<endl;
         
         cout<<"====================="<<endl;
         cout<<"ADD SONG TESTS"<<endl;
