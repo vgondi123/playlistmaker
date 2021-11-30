@@ -6,6 +6,7 @@ User_Menu::~User_Menu(){
 		
 		for(int i=0;i<user_playables.size();i++){
 			user_playables.at(i)->deleteP();
+			delete user_playables[i];
 		}
 		user_playables.clear();
 		
@@ -33,6 +34,7 @@ void User_Menu::display_options(int d){
       
      		if(option == "AD") {
 			public_add_playlist();
+			//public_create_new_playlist();
      		}
      		else if(option == "D") {
 			public_delete_playlist();
@@ -68,6 +70,7 @@ void User_Menu::display_options(int d){
       
      		if(option == "AD") {
 			private_add_playlist();
+			//private_create_new_playlist();
      		}
      		else if(option == "D") {
 			private_delete_playlist();
@@ -103,6 +106,23 @@ Public_Playlist* User_Menu::public_create_new_playlist(){
 	}
 }
 
+// void User_Menu::public_create_new_playlist(){
+// 	string playlist_name;
+// 	cout << "Input the playlist name: ";
+//         getline(cin,playlist_name);
+	
+// 	while(1){
+//         	for(int i = 0; i < user_playables.size(); i++) {
+//             		if(user_playables.at(i)->get_name() == playlist_name) {
+//                	 		cout << "the name already exists!" << endl;
+// 				return ;
+//             		}
+//         	}
+// 		Public_Playlist* temp = new Public_Playlist(playlist_name);
+// 		user_playables.push_back(temp);
+// 		delete temp;
+// 	}
+// }
 void User_Menu::public_delete_playlist(){
 	for(unsigned int i = 0 ; i < user_playables.size(); i++ ){
 		cout << i+1 << ". " << user_playables.at(i)->get_name() << endl;
@@ -190,6 +210,23 @@ Private_Playlist* User_Menu::private_create_new_playlist(){
 		return new Private_Playlist(playlist_name);
 	}
 }
+// void User_Menu::private_create_new_playlist(){
+// 	string playlist_name;
+// 	cout << "Input the playlist name: ";
+//         getline(cin,playlist_name);
+	
+// 	while(1){
+//         	for(int i = 0; i < user_playables.size(); i++) {
+//             		if(user_playables.at(i)->get_name() == playlist_name) {
+//                	 		cout << "the name already exists!" << endl;
+// 				return ;
+//             		}
+//         	}
+// 		Private_Playlist* temp = new Private_Playlist(playlist_name);
+// 		user_playables.push_back(temp);
+// 		delete temp;
+// 	}
+// }
 
 void User_Menu::private_delete_playlist(){
 	for(unsigned int i = 0 ; i < user_playables.size(); i++ ){
