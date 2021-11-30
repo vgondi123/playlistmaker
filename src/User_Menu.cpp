@@ -33,7 +33,8 @@ void User_Menu::display_options(int d){
 		cin.ignore();
       
      		if(option == "AD") {
-			public_add_playlist();
+			//public_add_playlist();
+			public_create_new_playlist();
      		}
      		else if(option == "D") {
 			public_delete_playlist();
@@ -68,7 +69,8 @@ void User_Menu::display_options(int d){
 		cin.ignore();
       
      		if(option == "AD") {
-			private_add_playlist();
+			//private_add_playlist();
+			private_create_new_playlist();
      		}
      		else if(option == "D") {
 			private_delete_playlist();
@@ -88,7 +90,23 @@ void User_Menu::display_options(int d){
   
 }
 
-Public_Playlist* User_Menu::public_create_new_playlist(){
+// Public_Playlist* User_Menu::public_create_new_playlist(){
+// 	string playlist_name;
+// 	cout << "Input the playlist name: ";
+//         getline(cin,playlist_name);
+	
+// 	while(1){
+//         	for(int i = 0; i < user_playables.size(); i++) {
+//             		if(user_playables.at(i)->get_name() == playlist_name) {
+//                	 		cout << "the name already exists!" << endl;
+// 				return nullptr;
+//             		}
+//         	}
+// 		return new Public_Playlist(playlist_name);
+// 	}
+// }
+
+void User_Menu::public_create_new_playlist(){
 	string playlist_name;
 	cout << "Input the playlist name: ";
         getline(cin,playlist_name);
@@ -97,13 +115,12 @@ Public_Playlist* User_Menu::public_create_new_playlist(){
         	for(int i = 0; i < user_playables.size(); i++) {
             		if(user_playables.at(i)->get_name() == playlist_name) {
                	 		cout << "the name already exists!" << endl;
-				return nullptr;
+				return ;
             		}
         	}
-		return new Public_Playlist(playlist_name);
+		user_playables.push_back(new PUblic_Playlist(playlist_name));
 	}
 }
-
 void User_Menu::public_delete_playlist(){
 	for(unsigned int i = 0 ; i < user_playables.size(); i++ ){
 		cout << i+1 << ". " << user_playables.at(i)->get_name() << endl;
@@ -164,19 +181,34 @@ void User_Menu::public_access_playlist(){
 
 }
 
-void User_Menu::public_add_playlist()
-{	
-	Public_Playlist* new_playlist = public_create_new_playlist();
-	if(new_playlist)
-	{
-		user_playables.push_back(new_playlist);
-	}
+// void User_Menu::public_add_playlist()
+// {	
+// 	Public_Playlist* new_playlist = public_create_new_playlist();
+// 	if(new_playlist)
+// 	{
+// 		user_playables.push_back(new_playlist);
+// 	}
 	
-}
+// }
 //END PUBLIC FUNCTIONS
 
 //START PRIVATE FUNCTIONS	
-Private_Playlist* User_Menu::private_create_new_playlist(){
+// Private_Playlist* User_Menu::private_create_new_playlist(){
+// 	string playlist_name;
+// 	cout << "Input the playlist name: ";
+//         getline(cin,playlist_name);
+	
+// 	while(1){
+//         	for(int i = 0; i < user_playables.size(); i++) {
+//             		if(user_playables.at(i)->get_name() == playlist_name) {
+//                	 		cout << "the name already exists!" << endl;
+// 				return nullptr;
+//             		}
+//         	}
+// 		return new Private_Playlist(playlist_name);
+// 	}
+// }
+void User_Menu::private_create_new_playlist(){
 	string playlist_name;
 	cout << "Input the playlist name: ";
         getline(cin,playlist_name);
@@ -185,10 +217,10 @@ Private_Playlist* User_Menu::private_create_new_playlist(){
         	for(int i = 0; i < user_playables.size(); i++) {
             		if(user_playables.at(i)->get_name() == playlist_name) {
                	 		cout << "the name already exists!" << endl;
-				return nullptr;
+				return ;
             		}
         	}
-		return new Private_Playlist(playlist_name);
+		user_playables.push_back(new Private_Playlist(playlist_name));
 	}
 }
 
@@ -252,15 +284,15 @@ void User_Menu::private_access_playlist(){
 
 }
 
-void User_Menu::private_add_playlist()
-{	
-	Private_Playlist* new_playlist = private_create_new_playlist();
-	if(new_playlist)
-	{
-		user_playables.push_back(new_playlist);
-	}
+// void User_Menu::private_add_playlist()
+// {	
+// 	Private_Playlist* new_playlist = private_create_new_playlist();
+// 	if(new_playlist)
+// 	{
+// 		user_playables.push_back(new_playlist);
+// 	}
 	
-}
+// }
 
 //USED FOR TESTING PURPOSES ONLY
 int User_Menu::access_playlist(int tn, int input){
