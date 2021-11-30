@@ -27,7 +27,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete access_playlist_test_one;
+            //delete access_playlist_test_one;
     
             //Access Playlist Test Two
             cout<<"Test two: check that all playlists are printed to the user"<<endl;
@@ -45,7 +45,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete access_playlist_test_two;
+            //delete access_playlist_test_two;
             
             //Access Playlist Test Three
             cout<<"Test three: if user inputs number too high or too low"<<endl;
@@ -70,7 +70,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete access_playlist_test_three;
+            //delete access_playlist_test_three;
     
             //Access Playlist Test Four
             cout<<"Test four: if user inputs 0"<<endl;
@@ -88,7 +88,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete access_playlist_test_four;
+            //delete access_playlist_test_four;
             
             //Access Playlist Test Five
             cout<<"Test five: if user inputs valid value"<<endl;
@@ -106,7 +106,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete access_playlist_test_five;
+            //delete access_playlist_test_five;
     
         cout<<"====================="<<endl;
         cout<<"FINSIHED ACCESS_PLAYLIST TESTS"<<endl;
@@ -130,7 +130,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete Hide_Unhide_test_one;
+            //delete Hide_Unhide_test_one;
     
             //Hide unhide song Test Two
             cout<<"Test two: song is not found"<<endl;
@@ -144,7 +144,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete Hide_Unhide_test_two;
+            //delete Hide_Unhide_test_two;
     
             //Hide unhide song Test Three
             cout<<"Test three: song was found "<<endl;
@@ -158,7 +158,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete Hide_Unhide_test_three;
+            //delete Hide_Unhide_test_three;
             
     
         cout<<"====================="<<endl;
@@ -183,7 +183,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete Shuffle_test_one;
+            //delete Shuffle_test_one;
     
             //Shuffle Test two
             cout<<"Test two: if playlist is not empty"<<endl;
@@ -342,40 +342,40 @@ int main()
         cout<<"FINSIHED DELETE PLAYLIST TESTS"<<endl;
         cout<<"====================="<<endl;
         cout<<endl;
-	delete testerD;
-	delete test_Analytics;
-	delete test_play;
-	delete song_test_play;
+	//delete testerD;
+	//delete test_Analytics;
+	//delete test_play;
+	//delete song_test_play;
 	
         
-//         cout<<"====================="<<endl;
-//         cout<<"PLAYLIST DISPLAY TESTS"<<endl;
-//         cout<<"====================="<<endl;
-//         cout<<endl;
+        cout<<"====================="<<endl;
+        cout<<"PLAYLIST DISPLAY TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
             
-//             //Playlist Display Test One
-//             cout << "Test one: Public playlist displays correctly" << endl;
-//             Public_Playlist* display_test = new Public_Playlist("c");
-//             cout << "Test Result: ";
-//             string display;
-//             Public_Song* temp2 = new Public_Song("he", "hi", 100);
-//             display_test->add_song(temp2);
-//             display = "he - hi";
+            //Playlist Display Test One
+            cout << "Test one: Public playlist displays correctly" << endl;
+            Public_Playlist* display_test = new Public_Playlist("c");
+            cout << "Test Result: ";
+            string display;
+            Public_Song* temp2 = new Public_Song("he", "hi", 100);
+            display_test->add_song(temp2);
+            display = "he - hi";
 
-//             display = display +  " (AS) - ADD SONG (DS) - DELETE SONG (HS) - HIDE/UNHIDE SONG (P) - PLAY (PS) - PLAY SONG (S) - SHUFFLE (A) - ANALYTICS (E) - EXIT ENTER OPTION:";
-//             if (display_test->display2() == display) {
-//                cout << "PASSED - Displayed Correctly" << endl;
-//             }
-//            else {
-//                cout <<"FAILED - Incorrect Display" << endl;
-//             }
-//             cout << endl;
-//             //delete temp2;
+            display = display +  " (AS) - ADD SONG (DS) - DELETE SONG (HS) - HIDE/UNHIDE SONG (P) - PLAY (PS) - PLAY SONG (S) - SHUFFLE (A) - ANALYTICS (E) - EXIT ENTER OPTION:";
+            if (display_test->display2() == display) {
+               cout << "PASSED - Displayed Correctly" << endl;
+            }
+           else {
+               cout <<"FAILED - Incorrect Display" << endl;
+            }
+            cout << endl;
+            //delete temp2;
       
-//         cout<<"====================="<<endl;
-//         cout<<"FINSIHED PLAYLIST DISPLAY TESTS"<<endl;
-//         cout<<"====================="<<endl;
-//         cout<<endl;
+        cout<<"====================="<<endl;
+        cout<<"FINSIHED PLAYLIST DISPLAY TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
         
 //         cout<<"====================="<<endl;
 //         cout<<"ADD SONG TESTS"<<endl;
