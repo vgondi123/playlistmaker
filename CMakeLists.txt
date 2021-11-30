@@ -13,14 +13,6 @@ ADD_EXECUTABLE(test
     src/Private_Song.cpp
 )
 
-ADD_EXECUTABLE(test2
-    tests/test2.cpp
-    src/User_Menu.cpp
-    src/Public_Playlist.cpp
-    src/Private_Playlist.cpp
-    src/Public_Song.cpp
-    src/Private_Song.cpp
-)
 
 ADD_EXECUTABLE(output
     src/main.cpp
