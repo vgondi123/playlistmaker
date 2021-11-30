@@ -450,8 +450,8 @@ int main()
         cout<<"FINSIHED PLAY SONG TESTS"<<endl;
         cout<<"====================="<<endl;
         cout<<endl;
-    
-	cout << "======================" << endl;
+
+        cout << "======================" << endl;
         cout << "Create Playlist Test" << endl;
         cout << "======================" << endl;
         cout << endl;
@@ -474,12 +474,11 @@ int main()
         cout << "======================" << endl;
         cout << "Delete a Song in Playlist Test Finished" << endl;
         cout << "======================" << endl;
-	cout<<endl;
+	      cout<<endl;
 
-    cout<<endl;
-    cout<<"====================="<<endl;
-    cout<<"TESTS COMPLETED"<<endl;
-    cout<<"====================="<<endl;
+   	cout<<"====================="<<endl;
+   	cout<<"TESTS COMPLETED"<<endl;
+   	cout<<"====================="<<endl;
     
     return 0;
 }
