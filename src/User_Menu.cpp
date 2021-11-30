@@ -118,7 +118,7 @@ void User_Menu::public_create_new_playlist(){
 				return ;
             		}
         	}
-		user_playables.push_back(new PUblic_Playlist(playlist_name));
+		user_playables.push_back(new Public_Playlist(playlist_name));
 	}
 }
 void User_Menu::public_delete_playlist(){
