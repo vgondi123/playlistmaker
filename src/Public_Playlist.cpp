@@ -492,3 +492,14 @@ string Public_Playlist::playSong(string song, string artist) {
 
        }
 }
+
+string Public_Playlist::display2() {
+      string dis;
+      for (unsigned int i = 0; i < songs.size(); i++)
+      {
+      dis = dis + songs.at(i)->get_name() +  " - " + songs.at(i)->get_artist();
+      }
+      
+      dis = dis +  " (AS) - ADD SONG (DS) - DELETE SONG (HS) - HIDE/UNHIDE SONG (P) - PLAY (PS) - PLAY SONG (S) - SHUFFLE (A) - ANALYTICS (E) - EXIT ENTER OPTION:";
+   return dis;
+}
