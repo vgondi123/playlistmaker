@@ -16,6 +16,16 @@ private:
 	double length;
 
 public:
+	~Private_Playlist(){
+		for(int i=0;i<songs.size();i++){
+			delete songs[i];
+		}
+		songs.clear();
+		for(int j=0;shuffled_songs.size();j++){
+			delete shuffled_songs[j];
+		}
+		shuffled_songs.clear();
+	}
 	Private_Playlist(string);
 	string get_name() { return name; }
 	double get_length() { return length; }

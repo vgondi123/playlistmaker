@@ -202,7 +202,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete Shuffle_test_two;
+            //delete Shuffle_test_two;
             
             //Shuffle Test three
             cout<<"Test three: if playlist is not empty"<<endl;
@@ -221,7 +221,7 @@ int main()
                 cout<<"FAILED: undefined behavior"<<endl;
             }
             cout<<endl;
-            delete Shuffle_test_three;
+            //delete Shuffle_test_three;
     
         cout<<"====================="<<endl;
         cout<<"FINSIHED SHUFFLE TESTS"<<endl;
