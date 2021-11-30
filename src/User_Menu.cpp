@@ -195,7 +195,7 @@ void User_Menu::public_add_playlist()
 //END PUBLIC FUNCTIONS
 
 //START PRIVATE FUNCTIONS	
-// Private_Playlist* User_Menu::private_create_new_playlist(){
+Private_Playlist* User_Menu::private_create_new_playlist(){
 	string playlist_name;
 	cout << "Input the playlist name: ";
         getline(cin,playlist_name);
