@@ -375,7 +375,7 @@ int main()
                cout <<"FAILED - Incorrect Display" << endl;
             }
             cout << endl;
-            delete temp2;
+            //delete temp2;
       
         cout<<"====================="<<endl;
         cout<<"FINSIHED PLAYLIST DISPLAY TESTS"<<endl;
@@ -415,7 +415,7 @@ int main()
                 cout << "FAILED: song was not added to playlist" << endl;
             }
             cout << endl;
-            delete temp;
+            //delete temp;
             
         cout<<"====================="<<endl;
         cout<<"FINSIHED ADD SONG TESTS"<<endl;
