@@ -245,13 +245,13 @@ void Private_Playlist::hide_unhide_song()
 
 void Private_Playlist::play(){
 //bug:should check if song is hidden before playing
-	if (songs.size() == 0){
+if (songs.size() == 0){
   		std::cout << "Please add songs to play" << endl;
   		display();
 		return;
 	}
 
-	if(songs.size() > 0){
+	if(songs.size() > 0 && songs.at(0)->get_hidden_status()==false){
   		std::cout << "Now playing: " << songs.at(0)->get_name() << ", by " << songs.at(0)->get_artist() << endl;
   		songs.at(0)->increment_time_played();
 	}
@@ -260,9 +260,11 @@ void Private_Playlist::play(){
 	 if(songs.size() > 1){
 	  std::cout << "Upcoming songs: " << endl; 
 		for( unsigned int i = 1; i < songs.size(); i++){
-		    std::cout << songs.at(i)->get_name() << ", by " << songs.at(i)->get_artist() << endl;
-			  songs.at(i)->increment_time_played();
-      }
+			if(songs.at(i)->get_hidden_status()==false){
+		    		std::cout << songs.at(i)->get_name() << ", by " << songs.at(i)->get_artist() << endl;
+			  	songs.at(i)->increment_time_played();
+			}
+      		}
 	}
 }
 
