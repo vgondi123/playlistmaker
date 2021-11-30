@@ -16,6 +16,17 @@ private:
 	double length;
 
 public:
+
+	~Public_Playlist(){
+		for(int i=0;i<songs.size();i++){
+			delete songs[i];
+		}
+		songs.clear();
+		for (int j=0;shuffled_songs.size();j++){
+			delete shuffled_songs[j];
+		}
+		shuffled_songs.clear();
+	}
 	Public_Playlist(string);
 	string get_name() { return name; }
 	double get_length() { return length; }
@@ -35,8 +46,12 @@ public:
 	void deleteP(); // helper function for delete  playlist
 	int hide_unhide_song(int,string);//testing purposes only
 	int shuffle(int,int);//testing purposes only
+
 	string Play(); //testing purposes only
 	string Analytics(); // testing purposes only
+
+   string playSong(string song, string artist);//testing purposes only
+   string display2();//testing purposes only
 };
 
 #endif // PUBLIC_PLAYLIST_HPP

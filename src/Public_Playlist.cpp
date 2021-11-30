@@ -374,9 +374,19 @@ void Public_Playlist::analytics(){
 	
 }
 
+// void Public_Playlist::deleteP(){//helper function
+// 	for(unsigned int i = 0; i < songs.size(); i++) 
+// 	    songs.erase(songs.begin()+i);
+// }
 void Public_Playlist::deleteP(){//helper function
-	for(unsigned int i = 0; i < songs.size(); i++) 
-	    songs.erase(songs.begin()+i);
+	for(unsigned int i = 0; i < songs.size(); i++){ 
+	    delete songs[i];
+	}
+	for(unsigned int i=0;i<shuffled_songs.size();i++){
+		delete shuffled_songs[i];
+	}
+	songs.clear();
+	shuffled_songs.clear();
 }
 
 int Public_Playlist::hide_unhide_song(int tn, string input)//testing purposes only
@@ -477,6 +487,7 @@ int Public_Playlist::shuffle(int tn, int input)//testing purposes only
 return counter;
 }
 
+
 string Public_Playlist::Play(){
 
 string test = "";
@@ -552,4 +563,35 @@ string test = "";
 return test;
 }
 
+
+
+string Public_Playlist::playSong(string song, string artist) {
+     bool found = false;
+     string test_song;
+     for (unsigned int i = 0; i < songs.size(); i++) {
+           if (songs.at(i)->get_name() == song && songs.at(i)->get_artist() == artist) {
+               found = true;
+              // cout << songs.at(i)->get_name() << " - " << songs.at(i)->get_artist() << " is now playing." << endl;
+               test_song = songs.at(i)->get_name() + " - " + songs.at(i)->get_artist() + " is now playing.";
+               songs.at(i)->increment_time_played();
+               return test_song;
+           }
+       }
+       if (!found) {
+          test_song = "Song is not found in current playlist.";
+          return test_song;
+
+       }
+}
+
+string Public_Playlist::display2() {
+      string dis;
+      for (unsigned int i = 0; i < songs.size(); i++)
+      {
+      dis = dis + songs.at(i)->get_name() +  " - " + songs.at(i)->get_artist();
+      }
+      
+      dis = dis +  " (AS) - ADD SONG (DS) - DELETE SONG (HS) - HIDE/UNHIDE SONG (P) - PLAY (PS) - PLAY SONG (S) - SHUFFLE (A) - ANALYTICS (E) - EXIT ENTER OPTION:";
+   return dis;
+}
 

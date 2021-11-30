@@ -33,6 +33,7 @@ int main()
 		cout<<"you have chosen public playlist"<<endl;
 		menu->display_options(1);
 	}
+	delete menu;
 	//menu->create_new_playlist();
 	//menu->display_options();
 // 	Playlist* playlist = new Playlist("PlayLists");
