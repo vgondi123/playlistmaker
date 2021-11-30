@@ -40,7 +40,13 @@ Our project will feature two interfaces, one where the user can see their playli
  * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+![Screenshot (15)](https://user-images.githubusercontent.com/60625627/143972904-eacd16d4-ee59-4c91-a654-5575ec78f545.png)
+![Screenshot (16)](https://user-images.githubusercontent.com/60625627/143972914-cc741241-1eff-4077-b976-da9b91fa24be.png)
+![Screenshot (17)](https://user-images.githubusercontent.com/60625627/143972920-1b19911f-1d0c-427d-a1bb-5e95c42b1a60.png)
+![Screenshot (18)](https://user-images.githubusercontent.com/60625627/143972930-87a7b633-fc04-48c8-87cc-f77ab4cf814e.png)
+![Screenshot (19)](https://user-images.githubusercontent.com/60625627/143972943-6c542ef1-a931-4068-8a56-4826a85ecb25.png)
+![Screenshot (20)](https://user-images.githubusercontent.com/60625627/143972955-4872bd9c-63df-4572-8287-24fe7a112726.png)
+
  ## Installation/Usage
  To use our project click the code button and copy the url, you can then clone the repository into an IDE of your choosing. If you are using hammer use the command "git clone --recursive \<githuburl\>". Once you have a copy, enter into the directory and type "cmake3 ." followed by "make" then to run the program type "./output". To interact with the program type your responses into the keyboard and hit the enter key when you have finished typing your response. Please enjoy our playlist program. 
  
