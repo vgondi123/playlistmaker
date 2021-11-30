@@ -377,45 +377,45 @@ int main()
         cout<<"====================="<<endl;
         cout<<endl;
         
-//         cout<<"====================="<<endl;
-//         cout<<"ADD SONG TESTS"<<endl;
-//         cout<<"====================="<<endl;
-//         cout<<endl;
+        cout<<"====================="<<endl;
+        cout<<"ADD SONG TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
             
-//             //Add Songs Test One
-//             cout << "Test one: Add if playlist is empty" << endl;
-//             Public_Playlist* add_song_test = new Public_Playlist("a");
-//             add_song_test->add_song("him", "he", 100);
-//             Public_Song *temp = nullptr;
-//             temp = new Public_Song("him", "he", 100);
-//             cout << "Test Result: ";
-//             if (add_song_test->song_exists(temp)) {
-//                 cout << "PASSED: song was added to playlist" << endl;
-//             }
-//             else {
-//                 cout << "FAILED: song was not added to playlist" << endl;
-//             }
-//             cout << endl;
-//             delete temp;
+            //Add Songs Test One
+            cout << "Test one: Add if playlist is empty" << endl;
+            Public_Playlist* add_song_test = new Public_Playlist("a");
+            add_song_test->add_song("him", "he", 100);
+            Public_Song *temp = nullptr;
+            temp = new Public_Song("him", "he", 100);
+            cout << "Test Result: ";
+            if (add_song_test->song_exists(temp)) {
+                cout << "PASSED: song was added to playlist" << endl;
+            }
+            else {
+                cout << "FAILED: song was not added to playlist" << endl;
+            }
+            cout << endl;
+            delete temp;
             
-//             //Add Songs Test Two
-//             cout << "Test two: Add if playlist is not empty" << endl;
-//             add_song_test->add_song("her", "she", 200);
-//             temp = new Public_Song("her", "she", 200);
-//             cout << "Test Result: ";
-//             if (add_song_test->song_exists(temp)) {
-//                cout << "PASSED: song was added to playlist" << endl;
-//             }
-//             else {
-//                 cout << "FAILED: song was not added to playlist" << endl;
-//             }
-//             cout << endl;
-//             //delete temp;
+            //Add Songs Test Two
+            cout << "Test two: Add if playlist is not empty" << endl;
+            add_song_test->add_song("her", "she", 200);
+            temp = new Public_Song("her", "she", 200);
+            cout << "Test Result: ";
+            if (add_song_test->song_exists(temp)) {
+               cout << "PASSED: song was added to playlist" << endl;
+            }
+            else {
+                cout << "FAILED: song was not added to playlist" << endl;
+            }
+            cout << endl;
+            //delete temp;
             
-//         cout<<"====================="<<endl;
-//         cout<<"FINSIHED ADD SONG TESTS"<<endl;
-//         cout<<"====================="<<endl;
-//         cout<<endl;
+        cout<<"====================="<<endl;
+        cout<<"FINSIHED ADD SONG TESTS"<<endl;
+        cout<<"====================="<<endl;
+        cout<<endl;
         
 //         cout<<"====================="<<endl;
 //         cout<<"PLAY SONG TESTS"<<endl;
