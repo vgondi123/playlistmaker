@@ -417,39 +417,39 @@ int main()
 //         cout<<"====================="<<endl;
 //         cout<<endl;
         
-        cout<<"====================="<<endl;
-        cout<<"PLAY SONG TESTS"<<endl;
-        cout<<"====================="<<endl;
-        cout<<endl;                                                                                                                                                                                  
-            //Play Song Test One
-            cout << "Test one: play song from non-empty playlist" << endl;
-            cout << "Test Result: ";
-            if (add_song_test->playSong("him", "he") == "him - he is now playing.") {
-               cout << "PASSED: function played song" << endl;
-            }
-            else {
-               cout << "FAILED: function did not play song" << endl;
-            }
-            cout << endl;
+//         cout<<"====================="<<endl;
+//         cout<<"PLAY SONG TESTS"<<endl;
+//         cout<<"====================="<<endl;
+//         cout<<endl;                                                                                                                                                                                  
+//             //Play Song Test One
+//             cout << "Test one: play song from non-empty playlist" << endl;
+//             cout << "Test Result: ";
+//             if (add_song_test->playSong("him", "he") == "him - he is now playing.") {
+//                cout << "PASSED: function played song" << endl;
+//             }
+//             else {
+//                cout << "FAILED: function did not play song" << endl;
+//             }
+//             cout << endl;
              
-            //Play Song Test Two
-            cout << "Test two: play song from empty playlist" << endl;
-            Public_Playlist* play_song_test = new Public_Playlist("b");
-            cout << "Test Result: ";
-            if (play_song_test->playSong("him", "he") == "Song is not found in current playlist.") {
-               cout << "PASSED: function outputted correct error message" << endl;
-            }
-            else {
-               cout << "FAILED: undefined behavior" << endl;
-            }
-            cout << endl;
-            delete add_song_test;
-            delete play_song_test;
+//             //Play Song Test Two
+//             cout << "Test two: play song from empty playlist" << endl;
+//             Public_Playlist* play_song_test = new Public_Playlist("b");
+//             cout << "Test Result: ";
+//             if (play_song_test->playSong("him", "he") == "Song is not found in current playlist.") {
+//                cout << "PASSED: function outputted correct error message" << endl;
+//             }
+//             else {
+//                cout << "FAILED: undefined behavior" << endl;
+//             }
+//             cout << endl;
+//             delete add_song_test;
+//             delete play_song_test;
        
-        cout<<"====================="<<endl;
-        cout<<"FINSIHED PLAY SONG TESTS"<<endl;
-        cout<<"====================="<<endl;
-        cout<<endl;
+//         cout<<"====================="<<endl;
+//         cout<<"FINSIHED PLAY SONG TESTS"<<endl;
+//         cout<<"====================="<<endl;
+//         cout<<endl;
     
 
     cout<<endl;
