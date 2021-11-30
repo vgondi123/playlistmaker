@@ -4,6 +4,7 @@
 #include <iterator>
 #include "../header/Public_Song.hpp"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -258,7 +259,7 @@ void Public_Playlist::play(){
 		return;
 	}
 
-	if(songs.size() > 0){
+	if(songs.size() > 0 && songs.at(0)->get_hidden_status()==false){
   		std::cout << "Now playing: " << songs.at(0)->get_name() << ", by " << songs.at(0)->get_artist() << endl;
   		songs.at(0)->increment_time_played();
 	}
@@ -267,9 +268,11 @@ void Public_Playlist::play(){
 	 if(songs.size() > 1){
 	  std::cout << "Upcoming songs: " << endl; 
 		for( unsigned int i = 1; i < songs.size(); i++){
-		    std::cout << songs.at(i)->get_name() << ", by " << songs.at(i)->get_artist() << endl;
-			  songs.at(i)->increment_time_played();
-      }
+			if(songs.at(i)->get_hidden_status()==false){
+		    		std::cout << songs.at(i)->get_name() << ", by " << songs.at(i)->get_artist() << endl;
+			  	songs.at(i)->increment_time_played();
+			}
+      		}
 	}
 }
 
@@ -473,3 +476,80 @@ int Public_Playlist::shuffle(int tn, int input)//testing purposes only
 //    return;
 return counter;
 }
+
+string Public_Playlist::Play(){
+
+string test = "";
+if (songs.size() == 0){
+  		//std::cout << "Please add songs to play" << endl;
+  		//display();
+		test = "Empty playlist";
+		return test;
+	}
+
+	if(songs.size() > 0 && songs.at(0)->get_hidden_status()==false){
+  		test =  "Now playing: " + songs.at(0)->get_name() + ", by " + songs.at(0)->get_artist();
+  		songs.at(0)->increment_time_played();
+		
+	}
+	
+
+	 if(songs.size() > 1){
+	  //std::cout << "Upcoming songs: " << endl; 
+		for( unsigned int i = 1; i < songs.size(); i++){
+		   if(songs.at(i)->get_hidden_status()==false){
+		    test += " and " + songs.at(i)->get_name() +  ", by " + songs.at(i)->get_artist();
+			  songs.at(i)->increment_time_played();
+		   }
+      		}
+	}
+return test;
+}
+
+string Public_Playlist::Analytics(){
+
+string test = "";
+
+	if(songs.size()==0){//checks if playlist is empty before performing analytics
+		test = "Please add songs before retrieving analytics.";
+		return test;
+	}
+	
+	vector<int> v;
+	int max = songs.at(0)->get_num_time_played();
+	
+	for(unsigned int i = 0; i < songs.size(); i++){ // find max time played
+		if(songs.at(i)->get_num_time_played() > max)
+		max = songs.at(i)->get_num_time_played();	
+	}
+	
+	
+	for(unsigned int i = 0; i < songs.size(); i++){ // make a vector to store all the indexes of this max val
+		if (songs.at(i)->get_num_time_played() == max)
+		v.push_back(i);
+	}
+	
+	if(v.size() == 1){ // if only one instance of max val
+		 test = "Your most played song is " +  songs.at(v.at(0))->get_name() + " by " + songs.at(v.at(0))->get_artist();
+	}
+	
+	else { // if few instances of highest val
+		test = "Your most played songs are : ";
+		for(unsigned int i = 0; i < v.size(); i++){
+			test += songs.at(v.at(i))->get_name() + " by " + songs.at(v.at(i))->get_artist() + "  "; 
+		}
+			
+	}
+		
+		
+	int sum = 0; 
+	for(unsigned int i = 0; i < songs.size(); i++){
+		sum += songs.at(i)->get_num_time_played() * songs.at(i)->get_length(); 
+	}
+	
+	test += " AND You spent " + to_string(sum) + " minutes listening to this playlist.";
+	
+return test;
+}
+
+
