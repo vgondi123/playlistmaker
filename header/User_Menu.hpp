@@ -31,6 +31,7 @@ public:
 	
 	int access_playlist(int,int); //testing purposes only
 	void add_playlist(); //testing purposes only
+	string Delete_Playlist(int input); //testing purposes only
 };
 
 #endif // USER_MENU_HPP
